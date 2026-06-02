@@ -1,0 +1,32 @@
+
+:root {
+  /* Primary Colors */
+  --color-primary-dark-blue1: #142257;
+  --color-primary: #142257;
+  --color-primary-dark-blue2: #1F3584;
+  --color-primary-sky-blue: #15B2F5;
+
+  /* Accent Colors */
+  --color-accent-red: #FF5E5E;
+}
+
+html {
+  font-size: 16px;
+  overflow: hidden;
+}
+
+header .services {
+  position: relative;
+}
+
+header .services::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-accent-red);
+}

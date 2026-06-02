@@ -4,27 +4,192 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomePro</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            colors: {
+              primary: "var(--color-primary-dark-blue1)",
+              "dark-blue-2": "var(--color-primary-dark-blue2)",
+              "accent-red": "var(--color-accent-red)",
+            },
+          },
+        },
+      };
+
+      window.onload = function () {
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const burgerIcon = document.getElementById("burger-icon");
+        const closeIcon = document.getElementById("close-icon");
+        const backdrop = document.getElementById("backdrop");
+
+        function handleToggleMenu() {}
+
+        function closeMenu() {
+          mobileMenu.classList.remove(
+            "max-h-[100vh]",
+            "opacity-100",
+            "h-[100vh]",
+          );
+          mobileMenu.classList.add("max-h-0", "opacity-0");
+        }
+
+        function openMenu() {
+          mobileMenu.classList.remove("max-h-0", "opacity-0");
+          mobileMenu.classList.add("max-h-[100vh]", "opacity-100", "h-[100vh]"); // max-h-[100vh] should be safely taller than the menu contents
+        }
+
+        // Toggle the hamburger / X icons
+        function toggleMenuControlClasses() {
+          burgerIcon.classList.toggle("hidden");
+          closeIcon.classList.toggle("hidden");
+          backdrop.classList.toggle("hidden");
+        }
+
+        backdrop.addEventListener("click", () => {
+          closeMenu();
+          burgerIcon.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
+          backdrop.classList.add("hidden");
+        });
+
+        mobileMenuBtn.addEventListener("click", () => {
+          const isClosed = mobileMenu.classList.contains("max-h-0");
+          if (isClosed) {
+            // Open Menu: Remove hidden/collapsed states, add expanded states
+            openMenu();
+          } else {
+            closeMenu();
+          }
+
+          toggleMenuControlClasses();
+        });
+      };
+    </script>
   </head>
 
   <body>
-    <header>
+    <header
+      class="bg-primary flex justify-between items-center fixed w-full xs:px-8 text-white z-50 px-6 py-3 md:px-20 lg:px-40 md:py-6"
+    >
       <div class="logo-container">
-        <img src="./assets/images/logo.png" alt="HomePro Logo" class="logo" />
-        <h1>HomePro</h1>
+        <a href="#">
+          <img src="./assets/images/logo.png" alt="Brand Logo" class="logo"
+        /></a>
+        <h1 class="hidden">HomePro</h1>
       </div>
 
       <nav>
-        <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#blog">Our Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <!-- Desktop Menu -->
+        <div class="flex justify-between items-center">
+          <ul class="hidden md:flex space-x-8">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#blog">Our Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <div class="flex md:hidden">
+            <button
+              id="mobile-menu-btn"
+              type="button"
+              class="text-white hover:text-indigo-200 focus:outline-none z-53"
+              aria-label="Toggle menu"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  id="burger-icon"
+                  class="block transition-all duration-300 origin-center"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+                <path
+                  id="close-icon"
+                  class="hidden transition-all duration-300 origin-center"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="md:hidden pb-4 bg-primary w-full max-w-[270px] max-h-0 fixed right-0 top-0 overflow-hidden transition-all duration-300 ease-in-out z-52 flex flex-col justify-between items-start"
+        >
+          <div class="flex justify-between items-center px-6 py-3">
+            <a href="#">
+              <img src="./assets/images/logo.png" alt="Brand Logo" class="logo"
+            /></a>
+          </div>
+
+          <ul
+            id="mobile-nav-links"
+            class="flex-grow w-full border-t border-dark-blue-2"
+          >
+            <li>
+              <a
+                href="#about"
+                class="block text-white text-center hover:bg-indigo-50 hover:text-indigo-600 px-3 py-2 text-base font-medium transition-colors duration-200 py-6 px-8"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="block text-white text-center hover:bg-indigo-50 hover:text-indigo-600 px-3 py-2 text-base font-medium transition-colors duration-200 py-6 px-8"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#blog"
+                class="block text-white text-center hover:bg-indigo-50 hover:text-indigo-600 px-3 py-2 text-base font-medium transition-colors duration-200 py-6 px-8"
+                >Our Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="block text-white text-center hover:bg-indigo-50 hover:text-indigo-600 px-3 py-2 text-base font-medium transition-colors duration-200 py-6 px-8"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <span class="services self-center">24 Hour Services</span>
+        </div>
+        <div
+          id="backdrop"
+          class="hidden md:hidden w-[100vw] h-[100vh] fixed inset-0 bg-black bg-opacity-50 z-51"
+        ></div>
       </nav>
-      <span>24 Hour Services</span>
+      <span class="services lg:block hidden">24 Hour Services</span>
     </header>
 
-    <main>
+    <main class="pt-18">
       <!-- Hero Section -->
       <section id="about" class="hero">
         <img
@@ -541,10 +706,7 @@
         </div>
         <button>
           View More
-          <img
-            src="./assets/icons/IC_arrow-Right.svg"
-            alt="Right Arrow Icon"
-          />
+          <img src="./assets/icons/IC_arrow-Right.svg" alt="Right Arrow Icon" />
         </button>
       </section>
 
