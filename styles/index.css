@@ -1,13 +1,17 @@
-
 :root {
   /* Primary Colors */
   --color-primary-dark-blue1: #142257;
   --color-primary: #142257;
   --color-primary-dark-blue2: #1F3584;
   --color-primary-sky-blue: #15B2F5;
+  /* Neutral Colors */
+  --color-neutral-gray-3: #9EA3B5;
 
   /* Accent Colors */
   --color-accent-red: #FF5E5E;
+
+  /* Breakpoints */
+  --breakpoint-md: 48rem;
 }
 
 html {
@@ -29,4 +33,54 @@ header .services::before {
   height: 10px;
   border-radius: 50%;
   background-color: var(--color-accent-red);
+}
+
+section#hero>.section-decoration {
+  position: absolute;
+  bottom: 0px;
+  background-image: url('../assets/images/decoration.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+section#hero>.left-decoration {
+  left: 0;
+}
+
+section#hero>.right-decoration {
+  right: 0;
+  transform: rotate(180deg) scaleY(-1);
+}
+
+
+body {
+  /* 1. Force the scrollbar to float ON TOP of content instead of pushing it */
+  overflow-y: overlay;
+
+  /* 2. Standard fallback for modern browsers */
+  overflow-x: hidden;
+  width: 100vw;
+  /* Prevent horizontal overflow due to scrollbar */
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  /* Gives the scrollbar a distinct width */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Semi-transparent handle so it's visible over blue */
+  border-radius: 10px;
+  border: 2px solid transparent;
+  /* Acts as padding inside the track */
+  background-clip: padding-box;
+}
+
+span.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
 }

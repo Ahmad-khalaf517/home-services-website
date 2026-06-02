@@ -22,6 +22,8 @@
               primary: "var(--color-primary-dark-blue1)",
               "dark-blue-2": "var(--color-primary-dark-blue2)",
               "accent-red": "var(--color-accent-red)",
+              "neutral-gray-3": "var(--color-neutral-gray-3)",
+              'primary-sky-blue': "var(--color-primary-sky-blue)",
             },
           },
         },
@@ -79,9 +81,9 @@
     </script>
   </head>
 
-  <body>
+  <body class="flex flex-col h-screen w-screen">
     <header
-      class="bg-primary flex justify-between items-center fixed w-full xs:px-8 text-white z-50 px-6 py-3 md:px-20 lg:px-40 md:py-6"
+      class="bg-primary flex justify-between items-center fixed w-full xs:px-8 text-white z-50 px-6 py-3 md:px-20 lg:px-40 md:py-6 left-0 top-0 right-0"
     >
       <div class="logo-container">
         <a href="#">
@@ -94,7 +96,7 @@
         <!-- Desktop Menu -->
         <div class="flex justify-between items-center">
           <ul class="hidden md:flex space-x-8">
-            <li><a href="#about">About Us</a></li>
+            <li><a href="#hero">About Us</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#blog">Our Blog</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -147,11 +149,11 @@
 
           <ul
             id="mobile-nav-links"
-            class="flex-grow w-full border-t border-dark-blue-2"
+            class="grow w-full border-t border-dark-blue-2"
           >
             <li>
               <a
-                href="#about"
+                href="#hero"
                 class="block text-white text-center hover:bg-indigo-50 hover:text-indigo-600 px-3 py-2 text-base font-medium transition-colors duration-200 py-6 px-8"
                 >About Us</a
               >
@@ -183,80 +185,113 @@
         </div>
         <div
           id="backdrop"
-          class="hidden md:hidden w-[100vw] h-[100vh] fixed inset-0 bg-black bg-opacity-50 z-51"
+          class="hidden md:hidden w-screen h-screen fixed inset-0 bg-black bg-opacity-50 z-51"
         ></div>
       </nav>
       <span class="services lg:block hidden">24 Hour Services</span>
     </header>
 
-    <main class="pt-18">
+    <main class="pt-[56px] md:pt-[80px] grow">
       <!-- Hero Section -->
-      <section id="about" class="hero">
-        <img
-          src="./assets/images/hero-image-left.png"
-          alt="Home Repair Services"
-          class="hero-image"
-        />
-        <div class="hero-content">
-          <ul class="tagline">
-            <li>Maintenance</li>
-            <li>Repairs</li>
-            <li>Improvements</li>
-          </ul>
-          <h2>Need improvement or repair your home? we can help!</h2>
-          <div class="features">
-            <p>Free Quotes</p>
-            <p>100% Commitment-Free</p>
-          </div>
-          <button
-            type="button"
-            class="cta-button"
-            onclick="window.location.href = 'tel:+1234567890'"
-          >
-            Call Us Now
-            <img
-              src="./assets/icons/phone-outlined-icon.svg"
-              alt="Phone Icon"
-            />
-          </button>
-          <div class="highlights">
-            <ul>
-              <li>
-                <img
-                  src="./assets/icons/Ic_24-Guarantee.svg"
-                  alt="Guarantee Icon"
-                />
-                <p>Satisfaction Guarantee</p>
-              </li>
-              <li>
-                <img
-                  src="./assets/icons/Ic_24-Clock.svg"
-                  alt="24H Availability Icon"
-                />
-                <p>24H Availability</p>
-              </li>
-              <li>
-                <img
-                  src="./assets/icons/Ic_24-Map-pin.svg"
-                  alt="Local US Professionals Icon"
-                />
-                <p>Local US Professionals</p>
-              </li>
-              <li>
-                <img
-                  src="./assets/icons/Ic_24-Calendar.svg"
-                  alt="Flexible Appointments Icon"
-                />
-                <p>Flexible Appointments</p>
-              </li>
-            </ul>
-          </div>
+      <section
+        id="hero"
+        class="relative bg-primary text-white pl-2 pr-2 pt-4 pb-[50px] flex justify-between items-center overflow-hidden"
+      >
+        <div
+          class="relative h-auto md:w-[300px] lg:w-[350px] xl:w-[400px] hidden md:inline-block"
+        >
+          <img
+            src="./assets/images/hero-image-left.png"
+            alt=""
+            class="h-auto hero-image-left"
+          />
+          <div
+            class="absolute inset-0 bg-[linear-gradient(-45deg,#131f4b_0%,rgba(19,31,75,0.4)_40%,transparent_100%)]"
+          ></div>
         </div>
-        <img
-          src="./assets/images/hero-image-right.png"
-          alt="Home Repair Services"
-          class="hero-image"
-        />
+
+        <div class="self-stretch flex flex-col justify-between items-center">
+          <div class="flex flex-col gap-5 p-6 max-w-[673px] text-center items-center">
+            <div
+              class="flex gap-6 text-neutral-gray-3 items-center justify-center text-sm"
+            >
+              <h6>Maintenance</h6>
+              <span class="dot bg-neutral-gray-3"></span>
+              <h6>Repairs</h6>
+              <span class="dot bg-neutral-gray-3"></span>
+              <h6>Improvements</h6>
+            </div>
+            <h2 class="text-6xl font-bold">
+              Need improvement or repair your home? we can help!
+            </h2>
+            <div class="features flex gap-6 text-sm text-primary-sky-blue">
+              <p class="pl-8 bg-[url('./assets/icons/check-icon.svg')] bg-left bg-no-repeat">Free Quotes</p>
+              <p class="pl-8 bg-[url('./assets/icons/check-icon.svg')] bg-left bg-no-repeat">100% Commitment-Free</p>
+            </div>
+            <button
+              type="button"
+              class="cta-button"
+              onclick="window.location.href = 'tel:+1234567890'"
+            >
+              Call Us Now
+              <img
+                src="./assets/icons/phone-outlined-icon.svg"
+                alt="Phone Icon"
+              />
+            </button>
+          </div>
+
+          <ul class="">
+            <li>
+              <img
+                src="./assets/icons/Ic_24-Guarantee.svg"
+                alt="Guarantee Icon"
+              />
+              <p>Satisfaction Guarantee</p>
+            </li>
+            <li>
+              <img
+                src="./assets/icons/Ic_24-Clock.svg"
+                alt="24H Availability Icon"
+              />
+              <p>24H Availability</p>
+            </li>
+            <li>
+              <img
+                src="./assets/icons/Ic_24-Map-pin.svg"
+                alt="Local US Professionals Icon"
+              />
+              <p>Local US Professionals</p>
+            </li>
+            <li>
+              <img
+                src="./assets/icons/Ic_24-Calendar.svg"
+                alt="Flexible Appointments Icon"
+              />
+              <p>Flexible Appointments</p>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="relative h-auto md:w-[300px] lg:w-[350px] xl:w-[400px] hidden md:inline-block"
+        >
+          <img
+            src="./assets/images/hero-image-right.png"
+            alt=""
+            class="h-auto hero-image-right"
+          />
+          <div
+            class="absolute inset-0 bg-[linear-gradient(45deg,#131f4b_0%,rgba(19,31,75,0.4)_40%,transparent_100%)]"
+          ></div>
+        </div>
+
+        <div
+          class="left-decoration section-decoration h-[31px] min-w-[60px] md:w-[45%] max-w-[481px] md:h-[45px]"
+        ></div>
+        <div
+          class="right-decoration section-decoration h-[31px] min-w-[60px] md:w-[45%] max-w-[481px] md:h-[45px]"
+        ></div>
       </section>
       <!-- Professional Services Section -->
       <section id="services" class="professional-services">
@@ -836,7 +871,7 @@
           <div class="company-menu">
             <h5>Company</h5>
             <ul>
-              <li><a href="#about">About Us</a></li>
+              <li><a href="#hero">About Us</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#blog">Our Blog</a></li>
               <li><a href="#contact">Contact</a></li>
