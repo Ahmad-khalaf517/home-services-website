@@ -24,6 +24,7 @@
               "accent-red": "var(--color-accent-red)",
               "neutral-gray-3": "var(--color-neutral-gray-3)",
               "primary-sky-blue": "var(--color-primary-sky-blue)",
+              "neutral-gray-1": "var(--color-neutral-gray-1)",
             },
           },
         },
@@ -312,47 +313,74 @@
         ></div>
       </section>
       <!-- Professional Services Section -->
-      <section id="services" class="professional-services">
-        <div class="section-content">
-          <div class="content-header">
-            <h2>Professional for your home services</h2>
-            <p>
+      <section
+        id="services"
+        class="px-8 pb-11 pt-20 flex flex-col gap-10 items-center justify-between lg:flex-row-reverse"
+      >
+        <div class="lg:flex-1 flex justify-center items-center">
+          <div
+            class="professional-image-container relative w-[327px] h-[321px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px]"
+          >
+            <img
+              src="./assets/images/sky.png"
+              alt="Sky background"
+              class="absolute inset-0 w-full h-full  z-0 [clip-path:url(#shield-clip)]"
+            />
+            <img
+              src="./assets/images/professional-image.png"
+              alt="Roofing Professionals"
+              class="absolute bottom-0 left-0 [clip-path:url(#shield-clip)]"
+            />
+
+            <svg class="absolute w-0 h-0" viewBox="0 0 100 100">
+              <defs>
+                <clipPath id="shield-clip" clipPathUnits="objectBoundingBox">
+                  <path
+                    d="M 0, 0.2901
+                 C 0, 0.2721 0.0098, 0.2556 0.0253, 0.2473
+                 L 0.4783, 0.0055
+                 C 0.4919, -0.0018 0.5081, -0.0018 0.5217, 0.0055
+                 L 0.9747, 0.2473
+                 C 0.9902, 0.2556 1, 0.2721 1, 0.2901
+                 V 0.9518
+                 C 1, 0.9784 0.9789, 1 0.9529, 1
+                 H 0.0471
+                 C 0.0211, 1 0, 0.9784 0, 0.9518
+                 Z"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div class="flex flex-col gap-6 lg:flex-1">
+          <div class="flex flex-col gap-3">
+            <h2 class="text-3xl font-bold">
+              Professional for your home services
+            </h2>
+            <p class="text-base text-neutral-gray-1">
               You need help for home care? We are home care professionals
               focused in the US region. We provide several services that support
               home services
             </p>
-            <div class="services">
-              <ul>
-                <li>Repair and installation</li>
-                <li>Maintenance</li>
-                <li>Home Security Services</li>
-                <li>Plumbing</li>
-                <li>Budget-friendly</li>
-                <li>Eco-friendly solutions</li>
-              </ul>
-            </div>
-            <div class="note">
-              We already 24 hours fast services to help you. You can contact us
-              at (888) 617-5894
-            </div>
           </div>
-          <button
-            type="button"
-            class="btn-call-us"
-            onclick="window.location.href = 'tel:+1234567890'"
+          <div class="services">
+            <ul class="flex flex-col gap-8 text-xl text-dark-blue-2 font-bold md:grid md:grid-cols-2">
+              <li>Repair and installation</li>
+              <li>Maintenance</li>
+              <li>Home Security Services</li>
+              <li>Plumbing</li>
+              <li>Budget-friendly</li>
+              <li>Eco-friendly solutions</li>
+            </ul>
+          </div>
+          <div
+            class="text-base max-w-[500px] px-8 py-4 w-full text-white bg-primary-sky-blue rounded-2xl"
           >
-            Call Us Now
-            <img
-              src="./assets/icons//phone-outlined-icon.svg"
-              alt="Phone Icon"
-            />
-          </button>
+            We already 24 hours fast services to help you. You can contact us at
+            (888) 617-5894
+          </div>
         </div>
-        <img
-          src="./assets/images/professional-image.png"
-          alt="Professional Services"
-          class="professional-services-image"
-        />
       </section>
 
       <!-- Our Services Section -->

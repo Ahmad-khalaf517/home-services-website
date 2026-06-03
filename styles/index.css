@@ -5,6 +5,7 @@
   --color-primary-dark-blue2: #1f3584;
   --color-primary-sky-blue: #15b2f5;
   /* Neutral Colors */
+  --color-neutral-gray-1: #545971;
   --color-neutral-gray-3: #9ea3b5;
 
   /* Accent Colors */
@@ -148,6 +149,23 @@ span.dot {
   width: 1rem;
 }
 
+section#services ul li {
+  position: relative;
+  padding-left: 2rem;
+}
+
+section#services ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: url("../assets/icons/check-icon.svg") no-repeat center;
+  background-size: contain;
+
+}
+
 @media (max-width: 48rem) {
   html {
     font-size: 12px;
@@ -198,7 +216,7 @@ span.dot {
     border-radius: 3rem;
   }
 
-    .highlight-features li  {
+  .highlight-features li {
     justify-content: flex-start;
     flex-direction: column;
   }
@@ -208,4 +226,5 @@ span.dot {
     height: 2rem;
     width: 2rem;
   }
+
 }
