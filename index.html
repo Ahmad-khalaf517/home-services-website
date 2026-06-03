@@ -23,7 +23,7 @@
               "dark-blue-2": "var(--color-primary-dark-blue2)",
               "accent-red": "var(--color-accent-red)",
               "neutral-gray-3": "var(--color-neutral-gray-3)",
-              'primary-sky-blue': "var(--color-primary-sky-blue)",
+              "primary-sky-blue": "var(--color-primary-sky-blue)",
             },
           },
         },
@@ -191,7 +191,7 @@
       <span class="services lg:block hidden">24 Hour Services</span>
     </header>
 
-    <main class="pt-[56px] md:pt-[80px] grow">
+    <main class="pt-[50px] md:pt-[80px] grow">
       <!-- Hero Section -->
       <section
         id="hero"
@@ -211,7 +211,9 @@
         </div>
 
         <div class="self-stretch flex flex-col justify-between items-center">
-          <div class="flex flex-col gap-5 p-6 max-w-[673px] text-center items-center">
+          <div
+            class="flex flex-col gap-5 p-6 max-w-[673px] text-center items-center"
+          >
             <div
               class="flex gap-6 text-neutral-gray-3 items-center justify-center text-sm"
             >
@@ -225,12 +227,20 @@
               Need improvement or repair your home? we can help!
             </h2>
             <div class="features flex gap-6 text-sm text-primary-sky-blue">
-              <p class="pl-8 bg-[url('./assets/icons/check-icon.svg')] bg-left bg-no-repeat">Free Quotes</p>
-              <p class="pl-8 bg-[url('./assets/icons/check-icon.svg')] bg-left bg-no-repeat">100% Commitment-Free</p>
+              <p
+                class="pl-8 bg-[url('./assets/icons/check-icon.svg')] bg-left bg-no-repeat"
+              >
+                Free Quotes
+              </p>
+              <p
+                class="pl-8 bg-[url('./assets/icons/check-icon.svg')] bg-left bg-no-repeat"
+              >
+                100% Commitment-Free
+              </p>
             </div>
             <button
               type="button"
-              class="cta-button"
+              class="btn-call-us"
               onclick="window.location.href = 'tel:+1234567890'"
             >
               Call Us Now
@@ -241,33 +251,41 @@
             </button>
           </div>
 
-          <ul class="">
+          <ul class="highlight-features">
             <li>
-              <img
-                src="./assets/icons/Ic_24-Guarantee.svg"
-                alt="Guarantee Icon"
-              />
+              <div class="icon-container">
+                <img
+                  src="./assets/icons/Ic_24-Guarantee.svg"
+                  alt="Guarantee Icon"
+                />
+              </div>
               <p>Satisfaction Guarantee</p>
             </li>
             <li>
-              <img
-                src="./assets/icons/Ic_24-Clock.svg"
-                alt="24H Availability Icon"
-              />
+              <div class="icon-container">
+                <img
+                  src="./assets/icons/Ic_24-Clock.svg"
+                  alt="24H Availability Icon"
+                />
+              </div>
               <p>24H Availability</p>
             </li>
             <li>
-              <img
-                src="./assets/icons/Ic_24-Map-pin.svg"
-                alt="Local US Professionals Icon"
-              />
+              <div class="icon-container">
+                <img
+                  src="./assets/icons/Ic_24-Map-pin.svg"
+                  alt="Local US Professionals Icon"
+                />
+              </div>
               <p>Local US Professionals</p>
             </li>
             <li>
-              <img
-                src="./assets/icons/Ic_24-Calendar.svg"
-                alt="Flexible Appointments Icon"
-              />
+              <div class="icon-container">
+                <img
+                  src="./assets/icons/Ic_24-Calendar.svg"
+                  alt="Flexible Appointments Icon"
+                />
+              </div>
               <p>Flexible Appointments</p>
             </li>
           </ul>
@@ -287,10 +305,10 @@
         </div>
 
         <div
-          class="left-decoration section-decoration h-[31px] min-w-[60px] md:w-[45%] max-w-[481px] md:h-[45px]"
+          class="left-decoration section-decoration h-[31px] min-w-[60px] md:w-[20%] max-w-[481px] md:h-[45px]"
         ></div>
         <div
-          class="right-decoration section-decoration h-[31px] min-w-[60px] md:w-[45%] max-w-[481px] md:h-[45px]"
+          class="right-decoration section-decoration h-[31px] min-w-[60px] md:w-[20%] max-w-[481px] md:h-[45px]"
         ></div>
       </section>
       <!-- Professional Services Section -->
@@ -320,7 +338,7 @@
           </div>
           <button
             type="button"
-            class="cta-button"
+            class="btn-call-us"
             onclick="window.location.href = 'tel:+1234567890'"
           >
             Call Us Now
@@ -443,7 +461,7 @@
                   <p>You can tell us what you need and we can help!</p>
                 </div>
 
-                <button>Call Us Now</button>
+                <button class="btn-call-us">Call Us Now</button>
               </li>
             </ul>
           </div>
@@ -814,7 +832,7 @@
 
           <button
             type="button"
-            class="cta-button"
+            class="btn-call-us"
             onclick="window.location.href = 'tel:+1234567890'"
           >
             Call Us Now
