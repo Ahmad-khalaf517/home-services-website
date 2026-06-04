@@ -20,6 +20,7 @@
             },
             colors: {
               primary: "var(--color-primary-dark-blue1)",
+              "dark-blue-1": "var(--color-primary-dark-blue1)",
               "dark-blue-2": "var(--color-primary-dark-blue2)",
               "accent-red": "var(--color-accent-red)",
               "neutral-gray-3": "var(--color-neutral-gray-3)",
@@ -252,7 +253,9 @@
             </button>
           </div>
 
-          <ul class="highlight-features grid grid-cols-2 grid-rows-2 gap-12 relative md:flex md:gap-5 ">
+          <ul
+            class="highlight-features grid grid-cols-2 grid-rows-2 gap-12 relative md:flex md:gap-5"
+          >
             <li>
               <div class="icon-container">
                 <img
@@ -324,7 +327,7 @@
             <img
               src="./assets/images/sky.png"
               alt="Sky background"
-              class="absolute inset-0 w-full h-full  z-0 [clip-path:url(#shield-clip)]"
+              class="absolute inset-0 w-full h-full z-0 [clip-path:url(#shield-clip)]"
             />
             <img
               src="./assets/images/professional-image.png"
@@ -365,7 +368,9 @@
             </p>
           </div>
           <div class="services">
-            <ul class="flex flex-col gap-8 text-xl text-dark-blue-2 font-bold md:grid md:grid-cols-2">
+            <ul
+              class="flex flex-col gap-8 text-xl text-dark-blue-2 font-bold md:grid md:grid-cols-2"
+            >
               <li>Repair and installation</li>
               <li>Maintenance</li>
               <li>Home Security Services</li>
@@ -384,109 +389,150 @@
       </section>
 
       <!-- Our Services Section -->
-      <section class="our-services">
-        <div class="section-content">
-          <div class="section-header">
-            <h2>Our Services</h2>
-            <p>
+      <section class="px-8 py-12">
+        <div
+          class="flex flex-col gap-2 items-center justify-between lg:flex-row"
+        >
+          <div
+            class="flex flex-col items-center justify-between gap-3 max-w-[500px]"
+          >
+            <h2 class="text-3xl font-bold">Our Services</h2>
+            <p class="text-center text-neutral-gray-1 text-base">
               You have problems with leaking pipes, broken tiles, lost keys or
               want to tidy up the trees around you, of course you need our help!
             </p>
           </div>
           <div class="services">
-            <ul>
-              <li class="service-card">
-                <img
-                  src="./assets/icons/Ic-Plumbing-Filled.svg"
-                  alt="Plumbing Icon"
-                />
-                <div class="text">
-                  <h5>Plumbing services</h5>
-                  <p>Drain pipe leaking, pipe clogged, replace the pipe line</p>
+            <ul
+              class="flex flex-col gap-8 md:grid md:grid-cols-2 lg:grid-cols-3"
+            >
+              <li class="flex flex-col items-center justify-center gap-4">
+                <div
+                  class="w-[5rem] h-[5rem] rounded-3xl bg-dark-blue-1 p-2 flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/icons/Ic-Plumbing-Filled.svg"
+                    alt="Plumbing Icon"
+                  />
+                </div>
+                <div class="text-center flex flex-col gap-4">
+                  <h5 class="text-2xl font-bold">Plumbing services</h5>
+                  <p class="text-base text-neutral-gray-1">
+                    Drain pipe leaking, pipe clogged, replace the pipe line
+                  </p>
                 </div>
               </li>
 
-              <li class="service-card">
-                <img
-                  src="./assets/icons/Ic_Roof_Filled.svg"
-                  alt="Roofing Repair Icon"
-                />
-                <div class="text">
-                  <h5>Roofing repair</h5>
-                  <p>
+              <li class="flex flex-col items-center justify-center gap-4">
+                <div
+                  class="w-[5rem] h-[5rem] rounded-3xl bg-dark-blue-1 p-2 flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/icons/Ic_Roof_Filled.svg"
+                    alt="Roofing Repair Icon"
+                  />
+                </div>
+                <div class="text-center flex flex-col gap-4">
+                  <h5 class="text-2xl font-bold">Roofing repair</h5>
+                  <p class="text-base text-neutral-gray-1">
                     Roof leaks, tile replacement, roof cleaning and maintenance
                   </p>
                 </div>
               </li>
 
-              <li class="service-card">
-                <img
-                  src="./assets/icons/Ic_Wall-Filled.svg"
-                  alt="Mold Removal Icon"
-                />
-                <div class="text">
-                  <h5>Mold Removal</h5>
-                  <p>
+              <li class="flex flex-col items-center justify-center gap-4">
+                <div
+                  class="w-[5rem] h-[5rem] rounded-3xl bg-dark-blue-1 p-2 flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/icons/Ic_Wall-Filled.svg"
+                    alt="Mold Removal Icon"
+                    class="w-[5rem] h-[5rem]"
+                  />
+                </div>
+                <div class="text-center flex flex-col gap-4">
+                  <h5 class="text-2xl font-bold">Mold Removal</h5>
+                  <p class="text-base text-neutral-gray-1">
                     Removing and cleaning mildew, Restoration and Prevention
                   </p>
                 </div>
               </li>
 
-              <li class="service-card">
-                <img
-                  src="./assets/icons/Ic_Wood-Tree-Filled.svg"
-                  alt="Tree Trimming Icon"
-                />
-                <div class="text">
-                  <h5>Tree Trimming</h5>
-                  <p>Trimming and cleaning, deadwood removal, tree shaping</p>
+              <li class="flex flex-col items-center justify-center gap-4">
+                <div
+                  class="w-[5rem] h-[5rem] rounded-3xl bg-dark-blue-1 p-2 flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/icons/Ic_Wood-Tree-Filled.svg"
+                    alt="Tree Trimming Icon"
+                  />
+                </div>
+                <div class="text-center flex flex-col gap-4">
+                  <h5 class="text-2xl font-bold">Tree Trimming</h5>
+                  <p class="text-base text-neutral-gray-1">
+                    Trimming and cleaning, deadwood removal, tree shaping
+                  </p>
                 </div>
               </li>
 
-              <li class="service-card">
-                <img
-                  src="./assets/icons/Ic_Repair_Filled.svg"
-                  alt="Appliance Repair Icon"
-                />
-                <div class="text">
-                  <h5>Appliance Repair</h5>
-                  <p>
+              <li class="flex flex-col items-center justify-center gap-4">
+                <div
+                  class="w-[5rem] h-[5rem] rounded-3xl bg-dark-blue-1 p-2 flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/icons/Ic_Repair_Filled.svg"
+                    alt="Appliance Repair Icon"
+                  />
+                </div>
+                <div class="text-center flex flex-col gap-4">
+                  <h5 class="text-2xl font-bold">Appliance Repair</h5>
+                  <p class="text-base text-neutral-gray-1">
                     Repair of washing machines, refrigerators, air conditioners,
                     etc.
                   </p>
                 </div>
               </li>
 
-              <li class="service-card">
-                <img
-                  src="./assets/icons/Ic_Bathroom-Filled.svg"
-                  alt="Bathroom Remodeling Icon"
-                />
-                <div class="text">
-                  <h5>Bathroom Remodeling</h5>
-                  <p>
+              <li class="flex flex-col items-center justify-center gap-4">
+                <div
+                  class="w-[5rem] h-[5rem] rounded-3xl bg-dark-blue-1 p-2 flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/icons/Ic_Bathroom-Filled.svg"
+                    alt="Bathroom Remodeling Icon"
+                  />
+                </div>
+                <div class="text-center flex flex-col gap-4">
+                  <h5 class="text-2xl font-bold">Bathroom Remodeling</h5>
+                  <p class="text-base text-neutral-gray-1">
                     Design and Consulting, installation, Repairing, tile repair
                   </p>
                 </div>
               </li>
 
-              <li class="service-card">
-                <img
-                  src="./assets/icons/Ic_Door-Filled.svg"
-                  alt="Locksmith Icon"
-                />
-                <div class="text">
-                  <h5>Locksmith</h5>
-                  <p>
+              <li class="flex flex-col items-center justify-center gap-4">
+                <div
+                  class="w-[5rem] h-[5rem] rounded-3xl bg-dark-blue-1 p-2 flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/icons/Ic_Door-Filled.svg"
+                    alt="Locksmith Icon"
+                  />
+                </div>
+                <div class="text-center flex flex-col gap-4">
+                  <h5 class="text-2xl font-bold">Locksmith</h5>
+                  <p class="text-base text-neutral-gray-1">
                     Lock Installation and Repair, Duplication, Lock Rekeying
                   </p>
                 </div>
               </li>
 
-              <li class="more-services-card">
-                <div class="text">
-                  <h5>More Services</h5>
-                  <p>You can tell us what you need and we can help!</p>
+              <li class="flex flex-col items-center justify-center gap-4">
+                <div class="text-center flex flex-col gap-4">
+                  <h5 class="text-2xl font-bold">More Services</h5>
+                  <p class="text-base text-neutral-gray-1">
+                    You can tell us what you need and we can help!
+                  </p>
                 </div>
 
                 <button class="btn-call-us">Call Us Now</button>
