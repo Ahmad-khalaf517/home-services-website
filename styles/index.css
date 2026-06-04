@@ -164,6 +164,18 @@ section#services ul li::before {
 
 }
 
+
+footer div:last-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 @media (max-width: 48rem) {
   html {
     font-size: 12px;
