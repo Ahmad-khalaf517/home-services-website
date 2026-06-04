@@ -936,32 +936,31 @@
       </section>
     </main>
 
-    <footer id="contact">
-      <form class="news-letter" action="">
-        <div class="text">
-          <h2>Subscribe to Our Newsletter</h2>
-          <p>
+    <footer id="contact" class="px-8 py-12 lg:px-40 bg-primary-sky-blue mt-20 flex flex-col gap-20">
+      <form class="news-letter bg-[#4AC9FF] rounded-4xl p-6 text-white flex flex-col gap-6" action="">
+        <div class="text flex flex-col gap-6 items-center justify-between">
+          <h2 class="text-4xl font-bold">Stay Connected with Our Newsletter</h2>
+          <p class="text-2xl">
             Subscribe to our newsletter to get more news, promo, or news
             services
           </p>
         </div>
-        <div class="input-group">
-          <input type="email" placeholder="Enter email address" required />
-          <button type="submit">Subscribe</button>
+        <div class="px-5 py-3 bg-white rounded-full flex items-center justify-between gap-4 w-full max-w-[500px]">
+          <input type="email" placeholder="Enter email address" required class="grow block h-full rounded-3xl text-black outline-0 text-2xl" />
+          <button class="bg-primary-sky-blue px-6 py-2 rounded-full text-xl font-bold" type="submit">Subscribe</button>
         </div>
       </form>
 
-      <div class="logo-description">
+      <div class="flex flex-col gap-10  justify-between lg:flex-row text-white">
         <div class="logo-container">
-          <img src="./assets/images/logo.png" alt="HomePro Logo" class="logo" />
-          <h1>HomePro</h1>
+          <img src="./assets/images/logo.svg" alt="HomePro Logo" class="logo" />
         </div>
-        <p>
+        <p class="text-2xl  text-left">
           Home Pro is your premier destination for top-notch smart home service
           and repair.
         </p>
 
-        <div class="social-media">
+        <div class="flex gap-6">
           <a href="#"
             ><img src="./assets/icons/youtube.svg" alt="YouTube Icon"
           /></a>
@@ -976,10 +975,10 @@
           /></a>
           <a href="#"><img src="./assets/icons/mail.svg" alt="Mail Icon" /></a>
         </div>
-        <menu class="footer-menu">
-          <div class="company-menu">
-            <h5>Company</h5>
-            <ul>
+        <menu class="grid grid-cols-2 gap-10 md:grid-cols-4 text-4xl">
+          <div class="flex flex-col gap-10">
+            <h5 class="font-bold">Company</h5>
+            <ul class="flex flex-col gap-10 text-3xl">
               <li><a href="#hero">About Us</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#blog">Our Blog</a></li>
@@ -987,9 +986,9 @@
             </ul>
           </div>
 
-          <div class="legal-menu">
-            <h5>Legal</h5>
-            <ul>
+          <div class="flex flex-col gap-10">
+            <h5 class="font-bold">Legal</h5>
+            <ul class="flex flex-col gap-10 text-3xl">
               <li><a href="#terms">Terms</a></li>
               <li><a href="#privacy">Privacy</a></li>
               <li><a href="#cookies">Cookies</a></li>
@@ -998,7 +997,7 @@
           </div>
         </menu>
       </div>
-      <div class="all-rights">
+      <div class="text-center text-white text-2xl p-8 border-t border-sky-300 mt-10">
         <p>© 2023 HomePro. All rights reserved</p>
       </div>
     </footer>
