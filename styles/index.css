@@ -104,12 +104,6 @@ span.dot {
   height: 2rem;
 }
 
-.highlight-features {
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
 .highlight-features li {
   display: flex;
   align-items: center;
@@ -173,14 +167,6 @@ section#services ul li::before {
 @media (max-width: 48rem) {
   html {
     font-size: 12px;
-  }
-
-  .highlight-features {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    position: relative;
-    gap: 3rem;
   }
 
   .highlight-features li:not(:first-child)::before {
