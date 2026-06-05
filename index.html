@@ -6,9 +6,11 @@
     <title>HomePro</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -17,6 +19,23 @@
           extend: {
             fontFamily: {
               sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            fontSize: {
+              h1: ["5rem", { lineHeight: "5.75rem", fontWeight: "800" }],
+              h2: ["4rem", { lineHeight: "4.75rem", fontWeight: "800" }],
+              h3: ["3.25rem", { lineHeight: "4rem", fontWeight: "700" }],
+              h4: ["2rem", { lineHeight: "2.5rem", fontWeight: "700" }],
+              h5: ["1.5rem", { lineHeight: "2rem", fontWeight: "700" }],
+              h6: ["1.25rem", { lineHeight: "1.75rem", fontWeight: "700" }],
+              "body-18": [
+                "1.125rem",
+                { lineHeight: "1.75rem", fontWeight: "400" },
+              ],
+              "body-20": ["1.25rem", { lineHeight: "2rem", fontWeight: "400" }],
+              "button-16": [
+                "1rem",
+                { lineHeight: "1.5rem", fontWeight: "700" },
+              ],
             },
             colors: {
               primary: "var(--color-primary-dark-blue1)",
@@ -193,7 +212,7 @@
       <span class="services lg:block hidden">24 Hour Services</span>
     </header>
 
-    <main class="pt-[50px] md:pt-[80px] grow">
+    <main class="pt-[50px] md:pt-[80px] grow hidden">
       <!-- Hero Section -->
       <section
         id="hero"
@@ -938,30 +957,32 @@
 
     <footer
       id="contact"
-      class="px-8 py-12 lg:px-40 bg-primary-sky-blue mt-20 flex flex-col gap-20"
+      class="text-white pt-9 bg-primary-sky-blue mt-20 flex flex-col gap-7"
     >
       <form
-        class="news-letter bg-[#4AC9FF] rounded-4xl p-6 text-white flex flex-col gap-6 md:flex-row flex-wrap items-center"
+        class="mx-6 lg:mx-40 bg-[#4AC9FF] rounded-4xl p-5 flex flex-col justify-between gap-6 md:flex-row flex-wrap items-center lg:p-6 "
         action=""
       >
-        <div class="flex flex-col gap-6 items-center justify-between md:items-start">
-          <h2 class="text-4xl font-bold">Stay Connected with Our Newsletter</h2>
-          <p class="text-2xl">
+        <div
+          class="flex flex-col gap-3 items-center justify-between md:items-start"
+        >
+          <h2 class="text-h5 font-bold">Stay Connected with Our Newsletter</h2>
+          <p class="text-body-18">
             Subscribe to our newsletter to get more news, promo, or news
             services
           </p>
         </div>
         <div
-          class="px-5 py-3 bg-white rounded-full flex items-center justify-between gap-4 w-full max-w-[500px]"
+          class="pl-4 py-2 pr-2 bg-white rounded-full flex items-center justify-between w-full max-w-[500px]"
         >
           <input
             type="email"
-            placeholder="Enter email address"
+            placeholder="email address"
             required
-            class="grow block h-full rounded-3xl text-black outline-0 text-2xl"
+            class="block h-full text-black outline-0 min-w-[1rem]"
           />
           <button
-            class="bg-primary-sky-blue px-6 py-2 rounded-full text-xl font-bold"
+            class="bg-primary-sky-blue px-4 py-2 rounded-full text-button-16"
             type="submit"
           >
             Subscribe
@@ -969,8 +990,12 @@
         </div>
       </form>
 
-      <div class="flex flex-col gap-10 justify-between lg:grid grid-cols-2 text-white ">
-        <div class="flex flex-col gap-10 justify-between md:justify-start">
+      <!-- Logo & Menu Wrapper -->
+      <div class="px-6 lg:px-40  flex flex-col gap-7 md:flex-row md:justify-between">
+        <div
+        class="flex flex-col gap-8 justify-between"
+      >
+        <div class="flex flex-col gap-8">
           <div class="logo-container">
             <img
               src="./assets/images/logo.svg"
@@ -978,7 +1003,7 @@
               class="logo"
             />
           </div>
-          <p class="text-2xl text-left">
+          <p class="text-body-18">
             Home Pro is your premier destination for top-notch smart home
             service and repair.
           </p>
@@ -1001,33 +1026,37 @@
             /></a>
           </div>
         </div>
-        <menu class="grid grid-cols-2 gap-10 text-4xl md:text-xl md:flex md:justify-end md:gap-[150px]">
-          <div class="flex flex-col gap-10">
-            <h5 class="font-bold">Company</h5>
-            <ul class="flex flex-col gap-10 text-2xl">
-              <li><a href="#hero">About Us</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#blog">Our Blog</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
+      </div>
 
-          <div class="flex flex-col gap-10">
-            <h5 class="font-bold">Legal</h5>
-            <ul class="flex flex-col gap-10 text-xl">
-              <li><a href="#terms">Terms</a></li>
-              <li><a href="#privacy">Privacy</a></li>
-              <li><a href="#cookies">Cookies</a></li>
-              <li><a href="#license">License</a></li>
-            </ul>
-          </div>
-        </menu>
+      <menu class="flex gap-16">
+        <div class="flex flex-col gap-6">
+          <h5 class="text-h5">Company</h5>
+          <ul class="flex flex-col gap-3 text-body-20">
+            <li><a href="#hero">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#blog">Our Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <h5 class="text-h5">Legal</h5>
+          <ul class="flex flex-col gap-3 text-body-20">
+            <li><a href="#terms">Terms</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#cookies">Cookies</a></li>
+            <li><a href="#license">License</a></li>
+          </ul>
+        </div>
+      </menu>
       </div>
-      <div
-        class="text-center text-white text-2xl pt-8 px-8 relative"
-      >
-        <p>© 2023 HomePro. All rights reserved</p>
-      </div>
+      <p class="py-6 text-center border-t border-white text-body-18 md:py-8">
+        ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        HomePro. All rights reserved
+      </p>
     </footer>
   </body>
 </html>
