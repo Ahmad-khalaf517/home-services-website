@@ -31,6 +31,10 @@
                 "1.125rem",
                 { lineHeight: "1.5rem", fontWeight: "600" },
               ],
+              "subheading-14": [
+                "0.875rem",
+                { lineHeight: "1.25rem", fontWeight: "600" },
+              ],
               "body-18": [
                 "1.125rem",
                 { lineHeight: "1.75rem", fontWeight: "400" },
@@ -781,26 +785,28 @@
       </section>
 
       <!-- Blog Section -->
-      <section id="blog" class="blog hidden">
-        <div class="blog-header">
-          <h3>Explore Insights in Our Blog</h3>
-          <p>
+      <section id="blog" class="px-8 py-12 lg:px-40 flex flex-col gap-8 md:gap-14">
+        <div class="flex flex-col gap-4 text-center">
+          <h3 class="text-h4">Explore Insights in Our Blog</h3>
+          <p class="text-body-18 text-neutral-gray-1 max-w-[500px] md:text-center self-center">
             Find lots of insights and information on our blog. Explore, learn,
             and get inspired today.
           </p>
         </div>
-        <div class="blog-posts">
-          <div class="blog-post-card">
+        <div class="flex flex-col gap-8 md:flex-row">
+          <div class="flex flex-col gap-4">
             <div class="thumbnail">
               <img
                 src="assets/images/smart-phone-thumbnail.png"
                 alt="Blog Smart Home Thumbnail"
               />
             </div>
-            <div class="blog-post-description">
-              <span class="date">19 Jan 2023</span>
-              <h4>Understanding Smart Home Systems & Maintenance</h4>
-              <p>
+            <div class="flex flex-col gap-4">
+              <span class="text-neutral-gray-1 text-body-14">19 Jan 2023</span>
+              <h4 class="text-h6">
+                Understanding Smart Home Systems & Maintenance
+              </h4>
+              <p class="text-body-16 text-neutral-gray-1 max-h-38 line-clamp-3">
                 Discover the ultimate guide to troubleshooting common smart home
                 issues in our latest blog post. From connectivity problems to
                 device malfunctions, we provide step-by-step solutions to help
@@ -813,24 +819,35 @@
                 become a troubleshooting pro!
               </p>
             </div>
-            <div class="blog-post-categories">
-              <span class="badge">Plumbing</span>
-              <span class="badge">Architecture</span>
-              <span class="badge">Maintenance</span>
+            <div class="flex gap-3 overflow-hidden">
+              <span
+                class="px-4 py-2 flex items-center justify-center bg-neutral-light-gray text-subheader-14 rounded-full"
+                >Plumbing</span
+              >
+              <span
+                class="px-4 py-2 flex items-center justify-center bg-neutral-light-gray text-subheader-14 rounded-full"
+                >Architecture</span
+              >
+              <span
+                class="px-4 py-2 flex items-center justify-center bg-neutral-light-gray text-subheader-14 rounded-full text-ellipsis"
+                >Maintenance</span
+              >
             </div>
           </div>
 
-          <div class="blog-post-card">
+          <div class="flex flex-col gap-4">
             <div class="thumbnail">
               <img
                 src="assets/images/home-repair-thumbnail.png"
                 alt="Blog Post Home Repair Thumbnail"
               />
             </div>
-            <div class="blog-post-description">
-              <span class="date">19 Jan 2023</span>
-              <h4>The Ultimate Guide to Home Repairs and Renovations</h4>
-              <p>
+            <div class="flex flex-col gap-4">
+              <span class="text-neutral-gray-1 text-body-14">19 Jan 2023</span>
+              <h4 class="text-h6">
+                The Ultimate Guide to Home Repairs and Renovations
+              </h4>
+              <p class="text-body-16 text-neutral-gray-1 max-h-38 line-clamp-3">
                 Discover the ultimate guide to troubleshooting common smart home
                 issues in our latest blog post. From connectivity problems to
                 device malfunctions, we provide step-by-step solutions to help
@@ -843,24 +860,35 @@
                 become a troubleshooting pro!
               </p>
             </div>
-            <div class="blog-post-categories">
-              <span class="badge">Plumbing</span>
-              <span class="badge">Architecture</span>
-              <span class="badge">Maintenance</span>
+            <div class="flex gap-3 overflow-hidden">
+              <span
+                class="px-4 py-2 flex items-center justify-center bg-neutral-light-gray text-subheader-14 rounded-full"
+                >Plumbing</span
+              >
+              <span
+                class="px-4 py-2 flex items-center justify-center bg-neutral-light-gray text-subheader-14 rounded-full"
+                >Architecture</span
+              >
+              <span
+                class="px-4 py-2 flex items-center justify-center bg-neutral-light-gray text-subheader-14 rounded-full text-ellipsis"
+                >Maintenance</span
+              >
             </div>
           </div>
 
-          <div class="blog-post-card">
+          <div class="flex flex-col gap-4">
             <div class="thumbnail">
               <img
                 src="assets/images/painting-thumbnail.png"
                 alt="Blog Post Painting Thumbnail"
               />
             </div>
-            <div class="blog-post-description">
-              <span class="date">19 Jan 2023</span>
-              <h4>Understanding Smart Home Systems & Maintenance</h4>
-              <p>
+            <div class="flex flex-col gap-4">
+              <span class="text-neutral-gray-1 text-body-14">19 Jan 2023</span>
+              <h4 class="text-h6">
+                Understanding Smart Home Systems & Maintenance
+              </h4>
+              <p class="text-body-16 text-neutral-gray-1 max-h-38 line-clamp-3">
                 Discover the ultimate guide to troubleshooting common smart home
                 issues in our latest blog post. From connectivity problems to
                 device malfunctions, we provide step-by-step solutions to help
@@ -873,31 +901,68 @@
                 become a troubleshooting pro!
               </p>
             </div>
-            <div class="blog-post-categories">
-              <span class="badge">Plumbing</span>
-              <span class="badge">Architecture</span>
-              <span class="badge">Maintenance</span>
+
+            <div class="flex gap-3 overflow-hidden">
+              <span
+                class="px-4 py-2 flex items-center justify-center bg-neutral-light-gray text-subheader-14 rounded-full"
+                >Plumbing</span
+              >
+              <span
+                class="px-4 py-2 flex items-center justify-center bg-neutral-light-gray text-subheader-14 rounded-full"
+                >Architecture</span
+              >
+              <span
+                class="px-4 py-2 flex items-center justify-center bg-neutral-light-gray text-subheader-14 rounded-full text-ellipsis"
+                >Maintenance</span
+              >
             </div>
           </div>
         </div>
-        <button>
+        <button class="flex items-center gap-1 text-primary-sky-blue text-button-18 justify-center">
           View More
-          <img src="./assets/icons/IC_arrow-Right.svg" alt="Right Arrow Icon" />
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12H19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 5L19 12L12 19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
         </button>
       </section>
 
       <!-- FAQ Section -->
-      <section class="px-8 py-12 lg:px-40 flex flex-col gap-8 md:grid md:grid-cols-2">
-        <div class="flex flex-col gap-3 lg:py-40">
-          <h3 class="text-h5 text-center md:text-left">Frequently Asked Questions</h3>
-          <p class="text-body-18 flex gap-3 justify-center items-center md:justify-start">
+      <section
+        class="px-8 py-12 lg:px-40 flex flex-col gap-8 md:gap-10 md:flex-row"
+      >
+        <div class="flex flex-col gap-3 lg:py-20 min-w-[300px]">
+          <h3 class="text-h5 text-center md:text-left">
+            Frequently Asked Questions
+          </h3>
+          <p
+            class="text-body-18 flex gap-3 justify-center items-center md:justify-start"
+          >
             <span class="text-neutral-gray-1">Still need help?</span>
-            <span class="text-primary-sky-blue font-semibold"
+            <span class="text-primary-sky-blue font-semibold underline"
               >Get Help Now</span
             >
           </p>
         </div>
-        <div class="flex flex-col gap-4 lg:py-40">
+        <div class="flex flex-col gap-4 lg:py-20 md:grow">
           <div
             class="card active bg-neutral-light-gray rounded-xl px-8 py-6 flex flex-col gap-4"
           >
@@ -910,7 +975,7 @@
                 src="assets/icons/IC_chevron-down.svg"
                 alt="Collapse Icon"
                 class="transition-transform duration-300"
-                style="transform:rotate(180deg)"
+                style="transform: rotate(180deg)"
               />
             </div>
             <p
@@ -921,9 +986,7 @@
               services, including repairs, maintenance, cleaning, and more.
             </p>
           </div>
-          <div
-            class="card rounded-xl px-8 py-6 flex flex-col gap-4"
-          >
+          <div class="card rounded-xl px-8 py-6 flex flex-col gap-4">
             <div
               class="card-header cursor-pointer flex justify-between items-start gap-8"
               onclick="toggleAccordion(this)"
@@ -945,9 +1008,7 @@
               services, including repairs, maintenance, cleaning, and more.
             </p>
           </div>
-          <div
-            class="card rounded-xl px-8 py-6 flex flex-col gap-4"
-          >
+          <div class="card rounded-xl px-8 py-6 flex flex-col gap-4">
             <div
               class="card-header cursor-pointer flex justify-between items-start gap-8"
               onclick="toggleAccordion(this)"
@@ -967,9 +1028,7 @@
               services, including repairs, maintenance, cleaning, and more.
             </p>
           </div>
-          <div
-            class="card rounded-xl px-8 py-6 flex flex-col gap-4"
-          >
+          <div class="card rounded-xl px-8 py-6 flex flex-col gap-4">
             <div
               class="card-header cursor-pointer flex justify-between items-start gap-8"
               onclick="toggleAccordion(this)"
@@ -991,9 +1050,7 @@
               services, including repairs, maintenance, cleaning, and more.
             </p>
           </div>
-          <div
-            class="card rounded-xl px-8 py-6 flex flex-col gap-4"
-          >
+          <div class="card rounded-xl px-8 py-6 flex flex-col gap-4">
             <div
               class="card-header cursor-pointer flex justify-between items-start gap-8"
               onclick="toggleAccordion(this)"
@@ -1022,15 +1079,14 @@
             const card = headerElement.parentElement;
             const description = card.querySelector(".card-description");
             const allCards = document.querySelectorAll(".card");
-            const active =  card.classList.contains("active");
+            const active = card.classList.contains("active");
 
             card.classList.toggle("active");
             card.classList.toggle("bg-neutral-light-gray");
             description.classList.toggle("hidden");
-            headerElement.querySelector("img").style.transform =
-              !active
-                ? "rotate(180deg)"
-                : "rotate(0deg)";
+            headerElement.querySelector("img").style.transform = !active
+              ? "rotate(180deg)"
+              : "rotate(0deg)";
           }
         </script>
       </section>
