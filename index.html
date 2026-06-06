@@ -224,7 +224,7 @@
       <!-- Hero Section -->
       <section
         id="hero"
-        class="hidden relative bg-primary text-white pl-2 pr-2 pt-4 pb-[50px] flex justify-between items-center overflow-hidden"
+        class="relative bg-primary text-white pl-2 pr-2 pt-4 pb-[50px] flex justify-between items-center overflow-hidden"
       >
         <div
           class="relative h-auto md:w-[300px] lg:w-[350px] xl:w-[400px] hidden md:inline-block"
@@ -933,56 +933,76 @@
 
       <!-- Banner Section  -->
       <section
-        class="mt-[3rem] bg-primary pt-12 lg:px-40 text-white relative flex flex-col gap-10 items-center justify-between lg:flex-row"
+        class="mt-[3rem] bg-primary lg:pl-40 text-white relative flex flex-col gap-10 items-center justify-between lg:flex-row"
       >
         <img
           src="./assets/images/banner-decoration.png"
           alt="Banner Image Decoration"
-          class="absolute left-[-1rem] top-[0] w-auto h-auto max-w-[calc(100%-4rem)] lg:left-[7rem]"
+          class="absolute top-[0] w-auto h-auto max-w-[calc(100%-4rem)] md:left-[7rem]"
         />
-          <div class="flex flex-col gap-6 items-center justify-between px-6 ">
-            <h2 class="text-h5 text-center">
-              Already to improve or repair your home? Let’s Talk!
-            </h2>
-            <ul
-              class="flex gap-6 justify-between text-primary-sky-blue text-nowrap"
-            >
-              <li class="flex items-center gap-2">
-                <img src="./assets/icons/check-icon.svg" alt="Feature 1 Icon" />
-                <p class="text-body-14">Free Quotes</p>
-              </li>
-              <li class="flex items-center gap-2">
-                <img src="./assets/icons/check-icon.svg" alt="Feature 2 Icon" />
-                <p class="text-body-14">100% Commitment-Free</p>
-              </li>
-            </ul>
+        <div class="flex flex-col pt-12 gap-6 items-center justify-between px-6 max-w-[480px] text-center md:text-left md:items-start">
+          <h2 class="text-h5">
+            Already to improve or repair your home? Let’s Talk!
+          </h2>
+          <ul
+            class="flex gap-5 justify-between text-primary-sky-blue text-nowrap"
+          >
+            <li class="flex gap-2 items-center">
+              <img src="./assets/icons/Ic_24-Check.svg" alt="Feature 1 Icon" class="w-[1rem] h-[1rem]" />
+              <p class="text-body-14">Free Quotes</p>
+            </li>
+            <li class="flex gap-2 items-center">
+              <img src="./assets/icons/Ic_24-Check.svg" alt="Feature 2 Icon" class="w-[1rem] h-[1rem]" />
+              <p class="text-body-14">100% Commitment-Free</p>
+            </li>
+          </ul>
 
-            <button
-              type="button"
-              class="flex bg-primary-sky-blue p-2 pl-4 rounded-full text-button-18 items-center gap-2"
-              onclick="window.location.href = 'tel:+1234567890'"
-            >
-              Call Us Now
-              <img
-                src="./assets/icons/phone-outlined-icon.svg"
-                alt="Phone Icon"
-                class="w-[2rem] h-[2rem]"
-              />
-            </button>
-          </div>
-        <!-- Banner Images -->
-          <div class="flex justify-end items-center relative min-w-[333px] min-h-[323px]">
-
-            <img src="./assets/images/banner-home.png" alt="Banner Home Image" class="absolute bottom-0 left-0 z-0" />
+          <button
+            type="button"
+            class="flex bg-primary-sky-blue p-2 pl-4 rounded-full text-button-18 items-center gap-2"
+            onclick="window.location.href = 'tel:+1234567890'"
+          >
+            Call Us Now
             <img
+              src="./assets/icons/phone-outlined-icon.svg"
+              alt="Phone Icon"
+              class="w-[2rem] h-[2rem]"
+            />
+          </button>
+        </div>
+        <!-- Banner Images -->
+         <img 
+          src="./assets/images/lg-banner.png"
+          alt="Banner Home Image"
+          class="hidden xl:inline-block" />
+        <div
+          class="flex justify-end items-center relative min-w-[333px] min-h-[323px] xl:hidden self-start sm:self-auto"
+        >
+          <img
+            src="./assets/images/banner-home.png"
+            alt="Banner Home Image"
+            class="absolute bottom-0 left-0 z-0"
+          />
+          <img
             src="./assets/images/banner-front.png"
             alt="Banner Image Decoration"
             class="h-auto lg:right-[7rem] absolute left-[2rem] bottom-0 z-1"
           />
-          <img src="./assets/images/banner-phone-decoration.png" alt="Banner Phone Decoration" class="absolute bottom-[5.3rem] left-[4rem] z-2"/>
-          <img src="./assets/images/phone-notification-decoration.png" alt="Phone Notification Decoration" class="absolute bottom-[10.7rem] left-[4.8rem] z-2"/>
-            <img src="./assets/images/banner-logo.svg" alt="Banner Logo" class="absolute bottom-[4rem] left-[0.5rem] z-3" />
-
+          <img
+            src="./assets/images/banner-phone-decoration.png"
+            alt="Banner Phone Decoration"
+            class="absolute bottom-[5.3rem] left-[4rem] z-2"
+          />
+          <img
+            src="./assets/images/phone-notification-decoration.png"
+            alt="Phone Notification Decoration"
+            class="absolute bottom-[10.7rem] left-[4.8rem] z-2"
+          />
+          <img
+            src="./assets/images/banner-logo.svg"
+            alt="Banner Logo"
+            class="absolute bottom-[4rem] left-[0.5rem] z-3"
+          />
         </div>
       </section>
     </main>
