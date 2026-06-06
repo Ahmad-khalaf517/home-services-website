@@ -27,6 +27,10 @@
               h4: ["2rem", { lineHeight: "2.5rem", fontWeight: "700" }],
               h5: ["1.5rem", { lineHeight: "2rem", fontWeight: "700" }],
               h6: ["1.25rem", { lineHeight: "1.75rem", fontWeight: "700" }],
+              "subheading-18": [
+                "1.125rem",
+                { lineHeight: "1.5rem", fontWeight: "600" },
+              ],
               "body-18": [
                 "1.125rem",
                 { lineHeight: "1.75rem", fontWeight: "400" },
@@ -53,6 +57,7 @@
               "neutral-gray-3": "var(--color-neutral-gray-3)",
               "primary-sky-blue": "var(--color-primary-sky-blue)",
               "neutral-gray-1": "var(--color-neutral-gray-1)",
+              "neutral-light-gray": "var(--color-neutral-light-gray)",
             },
           },
         },
@@ -345,7 +350,7 @@
       <!-- Professional Services Section -->
       <section
         id="services"
-        class="hidden px-8 pb-11 pt-20 flex flex-col gap-10 items-center justify-between lg:px-40 lg:flex-row-reverse"
+        class="px-8 pb-11 pt-20 flex flex-col gap-10 items-center justify-between lg:px-40 lg:flex-row-reverse"
       >
         <div class="flex justify-end items-center lg:flex-1">
           <div
@@ -587,7 +592,7 @@
       </section>
 
       <!-- Featured Section -->
-      <section class="featured hidden">
+      <section class="hidden">
         <div class="section-content">
           <div class="featured-header">
             <h3>Featured on</h3>
@@ -882,65 +887,166 @@
       </section>
 
       <!-- FAQ Section -->
-      <section class="faq hidden">
-        <h3>Frequently Asked Questions</h3>
-        <p class="description">
-          <span>Still need help?</span>
-          <span>Get Help Now</span>
-        </p>
-        <div class="content">
-          <div class="card active">
-            <div class="card-header">
-              <h5>What is HomePro?</h5>
-              <img src="assets/icons/IC_chevron-down.svg" alt="Collapse Icon" />
+      <section class="px-8 py-12 lg:px-40 flex flex-col gap-8 md:grid md:grid-cols-2">
+        <div class="flex flex-col gap-3 lg:py-40">
+          <h3 class="text-h5 text-center md:text-left">Frequently Asked Questions</h3>
+          <p class="text-body-18 flex gap-3 justify-center items-center md:justify-start">
+            <span class="text-neutral-gray-1">Still need help?</span>
+            <span class="text-primary-sky-blue font-semibold"
+              >Get Help Now</span
+            >
+          </p>
+        </div>
+        <div class="flex flex-col gap-4 lg:py-40">
+          <div
+            class="card active bg-neutral-light-gray rounded-xl px-8 py-6 flex flex-col gap-4"
+          >
+            <div
+              class="card-header cursor-pointer flex justify-between items-center"
+              onclick="toggleAccordion(this)"
+            >
+              <h5 class="text-subheading-18">What is HomePro?</h5>
+              <img
+                src="assets/icons/IC_chevron-down.svg"
+                alt="Collapse Icon"
+                class="transition-transform duration-300"
+                style="transform:rotate(180deg)"
+              />
             </div>
-            <p class="card-description">
+            <p
+              class="card-description max-h-96 overflow-hidden transition-all duration-300 ease-in-out text-[#737373]"
+            >
               HomePro is a home care platform that connects homeowners with
               professional service providers offering a wide range of home
               services, including repairs, maintenance, cleaning, and more.
             </p>
           </div>
-          <div class="card">
-            <div class="card-header">
-              <h5>
+          <div
+            class="card rounded-xl px-8 py-6 flex flex-col gap-4"
+          >
+            <div
+              class="card-header cursor-pointer flex justify-between items-start gap-8"
+              onclick="toggleAccordion(this)"
+            >
+              <h5 class="text-subheading-18">
                 Are the service providers on HomePro reliable and qualified?
               </h5>
-              <img src="assets/icons/IC_chevron-down.svg" alt="Collapse Icon" />
+              <img
+                src="assets/icons/IC_chevron-down.svg"
+                alt="Collapse Icon"
+                class="transition-transform duration-300"
+              />
             </div>
+            <p
+              class="hidden card-description max-h-96 overflow-hidden transition-all duration-300 ease-in-out text-[#737373]"
+            >
+              HomePro is a home care platform that connects homeowners with
+              professional service providers offering a wide range of home
+              services, including repairs, maintenance, cleaning, and more.
+            </p>
           </div>
-          <div class="card">
-            <div class="card-header">
-              <h5>
+          <div
+            class="card rounded-xl px-8 py-6 flex flex-col gap-4"
+          >
+            <div
+              class="card-header cursor-pointer flex justify-between items-start gap-8"
+              onclick="toggleAccordion(this)"
+            >
+              <h5 class="text-subheading-18">
                 What if I have an issue or complaint about a service provider?
               </h5>
-              <img src="assets/icons/IC_chevron-down.svg" alt="Collapse Icon" />
+              <img
+                src="assets/icons/IC_chevron-down.svg"
+                alt="Collapse Icon"
+                class="transition-transform duration-300"
+              />
             </div>
+            <p class="hidden card-description text-neutral-gray-1">
+              HomePro is a home care platform that connects homeowners with
+              professional service providers offering a wide range of home
+              services, including repairs, maintenance, cleaning, and more.
+            </p>
           </div>
-          <div class="card">
-            <div class="card-header">
-              <h5>How are payments handled on HomePro?</h5>
-              <img src="assets/icons/IC_chevron-down.svg" alt="Collapse Icon" />
+          <div
+            class="card rounded-xl px-8 py-6 flex flex-col gap-4"
+          >
+            <div
+              class="card-header cursor-pointer flex justify-between items-start gap-8"
+              onclick="toggleAccordion(this)"
+            >
+              <h5 class="text-subheading-18">
+                How are payments handled on HomePro?
+              </h5>
+              <img
+                src="assets/icons/IC_chevron-down.svg"
+                alt="Collapse Icon"
+                class="transition-transform duration-300"
+              />
             </div>
+            <p
+              class="hidden card-description max-h-96 overflow-hidden transition-all duration-300 ease-in-out text-[#737373]"
+            >
+              HomePro is a home care platform that connects homeowners with
+              professional service providers offering a wide range of home
+              services, including repairs, maintenance, cleaning, and more.
+            </p>
           </div>
-          <div class="card">
-            <div class="card-header">
-              <h5>How do I leave a review for a service provider?</h5>
-              <img src="assets/icons/IC_chevron-down.svg" alt="Collapse Icon" />
+          <div
+            class="card rounded-xl px-8 py-6 flex flex-col gap-4"
+          >
+            <div
+              class="card-header cursor-pointer flex justify-between items-start gap-8"
+              onclick="toggleAccordion(this)"
+            >
+              <h5 class="text-subheading-18">
+                How do I leave a review for a service provider?
+              </h5>
+              <img
+                src="assets/icons/IC_chevron-down.svg"
+                alt="Collapse Icon"
+                class="transition-transform duration-300"
+              />
             </div>
+            <p
+              class="hidden card-description max-h-96 overflow-hidden transition-all duration-300 ease-in-out text-[#737373]"
+            >
+              HomePro is a home care platform that connects homeowners with
+              professional service providers offering a wide range of home
+              services, including repairs, maintenance, cleaning, and more.
+            </p>
           </div>
         </div>
+
+        <script>
+          function toggleAccordion(headerElement) {
+            const card = headerElement.parentElement;
+            const description = card.querySelector(".card-description");
+            const allCards = document.querySelectorAll(".card");
+            const active =  card.classList.contains("active");
+
+            card.classList.toggle("active");
+            card.classList.toggle("bg-neutral-light-gray");
+            description.classList.toggle("hidden");
+            headerElement.querySelector("img").style.transform =
+              !active
+                ? "rotate(180deg)"
+                : "rotate(0deg)";
+          }
+        </script>
       </section>
 
       <!-- Banner Section  -->
       <section
-        class="mt-[3rem] bg-primary lg:pl-40 text-white relative flex flex-col gap-10 items-center justify-between lg:flex-row"
+        class="bg-primary lg:pl-40 text-white relative flex flex-col gap-10 items-center justify-between lg:flex-row"
       >
         <img
           src="./assets/images/banner-decoration.png"
           alt="Banner Image Decoration"
-          class="absolute top-[0] w-auto h-auto max-w-[calc(100%-4rem)] md:left-[7rem]"
+          class="absolute top-[0] w-auto h-auto max-w-[calc(100%-4rem)] md:left-[7rem] lg:w-[450px] xl:w-[581px]"
         />
-        <div class="flex flex-col pt-12 gap-6 items-center justify-between px-6 max-w-[480px] text-center md:text-left md:items-start">
+        <div
+          class="flex flex-col pt-12 gap-6 items-center justify-between px-6 max-w-[480px] text-center md:text-left md:items-start"
+        >
           <h2 class="text-h5">
             Already to improve or repair your home? Let’s Talk!
           </h2>
@@ -948,11 +1054,19 @@
             class="flex gap-5 justify-between text-primary-sky-blue text-nowrap"
           >
             <li class="flex gap-2 items-center">
-              <img src="./assets/icons/Ic_24-Check.svg" alt="Feature 1 Icon" class="w-[1rem] h-[1rem]" />
+              <img
+                src="./assets/icons/Ic_24-Check.svg"
+                alt="Feature 1 Icon"
+                class="w-[1rem] h-[1rem]"
+              />
               <p class="text-body-14">Free Quotes</p>
             </li>
             <li class="flex gap-2 items-center">
-              <img src="./assets/icons/Ic_24-Check.svg" alt="Feature 2 Icon" class="w-[1rem] h-[1rem]" />
+              <img
+                src="./assets/icons/Ic_24-Check.svg"
+                alt="Feature 2 Icon"
+                class="w-[1rem] h-[1rem]"
+              />
               <p class="text-body-14">100% Commitment-Free</p>
             </li>
           </ul>
@@ -971,10 +1085,11 @@
           </button>
         </div>
         <!-- Banner Images -->
-         <img 
+        <img
           src="./assets/images/lg-banner.png"
           alt="Banner Home Image"
-          class="hidden xl:inline-block" />
+          class="hidden xl:inline-block"
+        />
         <div
           class="flex justify-end items-center relative min-w-[333px] min-h-[323px] xl:hidden self-start sm:self-auto"
         >
